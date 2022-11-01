@@ -13,7 +13,7 @@ public class Server {
                 InputStream input = client.getInputStream(); // получаем поток данных для чтения от клиента
                 OutputStream output = client.getOutputStream(); // получаем поток для записи от клиента
                 while (true) { // бесконечно повторяем
-                    int request = input.read(); // получаем последний байт от клиента
+                    int request = input.read(); // получаем последнее число от клиента
                     if (request == -1) { // если его не существует (несуществующий байт равен -1)
                         System.out.printf("Соединение с %s разорвано\n", socket.getInetAddress().getHostAddress());
                         break; // разрываем связь
